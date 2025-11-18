@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Edad</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <main>
+    <section class="calculator">
+
+        <form id="age-form" novalidate>
+
+        <fieldset>
+    <!-- Día -->
+    
+    <label for="day">Día</label>
+    <input type="number" id="day" name="day" placeholder="DD" min="1" max="31" required>
+    <small id="error-day-empty" class="error" hidden>Ingresa Día.</small>
+    <small id="error-day-invalid" class="error" hidden>Día Inválido.</small>
+
+    <!-- Mes -->
+    <label for="month">Mes</label>
+    <input type="number" id="month" name="month" placeholder="MM" min="1" max="12" required>
+    <small id="error-month-empty" class="error" hidden>Ingresa el mes.</small>
+    <small id="error-month-invalid" class="error" hidden>Mes Inválido.</small>
+
+    <!-- Año -->
+    <label for="year">Año</label>
+    <input type="number" id="year" name="year" placeholder="AAAA" min="1900" max="2025" required>
+    <small id="error-year-empty" class="error" hidden>Ingresa Año.</small>
+    <small id="error-year-invalid" class="error" hidden>Año Inválido.</small>
+        </fieldset>
+
+ <section class="line-and-button">
+    <hr class="divider">
+    
+    <button type="submit" class="btn-submit">
+        <img src="images/icon-arrow.svg" alt="Flecha" class="icon-arrow">
+    </button>
+</section>
+<section class="results">
+
+    <p>
+        <span id="years-result">--</span> años
+    </p>
+    <p>
+        <span id="months-result">--</span> meses
+    </p>
+    <p>
+        <span id="days-result">--</span> días
+    </p>
+</section>
+
+
+        </form>
+
+        <output id="result" aria-live="polite"></output>
+    </section>
+</main>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
